@@ -1,9 +1,9 @@
 # urdoing
 ### Urdoing API Specifications and Guidlines
 
-"urdoing" stands for "Universal Resources + Doing",it aims an simple and powerfull style of API designing method.it's inspired both  by REST and rpc style API.
+"urdoing" stands for "Uniform Resource Doing" ,it aims an simple and powerfull style of API designing method.It's inspired both  by REST and rpc style API.
 
-for example ， to design  users APIs ,it will be this way in urdoing:
+For example ， to design users APIs ,each resource should provide some public doing(method) corresponding to curd operations：
 
 Query noe user info:
 ```rust
@@ -38,7 +38,7 @@ Delete two or more users:
 POST  /users/delete   -d '[{"user_id":123456},{"user_id":891011},...]'
 ```
  
-Aditionally,for some special operations,wo can add custom action freely,for example ,we need to merge two users in to one,we could do it in this way:
+Aditionally,for some special operations,wo can add custom doing freely,for example ,we need to merge two users in to one,we could do it in this way:
 
 Merge two users into one:
 ```rust
