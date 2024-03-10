@@ -1,7 +1,7 @@
 # urdoing
 ### Urdoing API Specifications and Guidlines
 
-"urdoing" stands for "Uniform Resource Doing" ,it aims an simple and powerfull style of API designing method.It's inspired both  by REST and rpc style API.
+"urdoing" stands for "Uniform Resource Doing" ,it aims an simple and powerfull style of API designing method.It's inspired both  by REST and RPC style API.
 
 For example ， to design users APIs ,each resource should provide some public doing(method) corresponding to curd operations：
 
