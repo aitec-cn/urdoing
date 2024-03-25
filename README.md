@@ -15,19 +15,19 @@ POST  /users/read     -d '[{"user_id":123456},{"user_id":891011},...]'
 ```
 Update one user info:
 ```rust
-POST  /users/update   -d '[{"user_id":123456,user_info_to_update:{...}]'
+POST  /users/update   -d '[{"user_id":123456,"user_info_to_update":"some_value",...]'
 ```
 Update two or more users info:
 ```rust
-POST  /users/update   -d '[{"user_id":123456,other_info...},{"user_id":7891011,other_info...}]'
+POST  /users/update   -d '[{"user_id":123456,"user_info_to_update":"some_value",...},{"user_id":891011,"user_info_to_update":"some_value",...}]'
 ```
 Create one user:
 ```rust
-POST  /users/create   -d '[{"user_id":123456,user_info_to_create:{...}]'
+POST  /users/create   -d '[{"user_id":123456,"user_info_to_create":"some_value",...]'
 ```
 Create two or more  users:
 ```rust
-POST  /users/create   -d '[{"user_id":123456,other_info...},{"user_id":7891011,other_info...}]'
+POST  /users/create   -d '[{"user_id":123456,"user_info_to_create":"some_value",...},{"user_id":7891011,"user_info_to_create":"some_value",...}]'
 ```
 Delete one user:
 ```rust
@@ -42,7 +42,7 @@ Aditionally,for some special operations,wo can add custom doing freely,for examp
 
 Merge two users into one:
 ```rust
-POST  /users/merge  -d '[{"user_id":123456},{"user_id":891011},...]'
+POST  /users/merge  -d '[{"user_id":123456},{"user_id":891011}]'
 ```
 
 In this way, we are able to implement all the functionality of REST and RPC-style APIs in a simpler, more powerful, and more consistent way.
